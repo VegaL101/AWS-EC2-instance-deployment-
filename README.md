@@ -20,13 +20,17 @@ The purpose of this project is to create, configure, and launched a AWS EC2 inst
 Step 1:
 Creating and launching the EC2 instance.
 
-This is all assuming you have already creates an Amaazon Web services account. Also, make sure to create a IAM user for your account when going about dailt to tasks as it is not best practice to be using your rootuser account for everything.  First we go to our console page and look up EC2 
+First, on the top left in the searchbar type 'EC2' and make sure to click it. You should then be brought to the ec2 dashboard
 
-.
+![ec2 dahsboard](https://github.com/user-attachments/assets/6a5285f9-6494-4b57-8aa8-68e3ce62862a)
 
-![sql portfolio](https://github.com/VegaL101/computer-updates-lab/assets/166334918/d683dae1-99bd-4431-80a3-2c3ea7c36e38)
+Once at the dashboard you're going to click on the 'launch instance' button that will take you to the next part of this step.
 
-The first part of the screenshot is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an AND operator to filter my results to output only login attempts that occurred after 18:00 and were unsuccessful. The first condition is login_time > '18:00', which filters for the login attempts that occurred after 18:00. The second condition is success = FALSE, which filters for the failed login attempts.
+##
+
+Next we set up the instance.
+
+![fill ins for instance](https://github.com/user-attachments/assets/d1a61f8d-b257-48c9-8c7a-2efbf4700823)
 
 
 
