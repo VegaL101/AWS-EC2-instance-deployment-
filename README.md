@@ -32,6 +32,13 @@ Next we set up the instance.
 
 ![fill ins for instance](https://github.com/user-attachments/assets/d1a61f8d-b257-48c9-8c7a-2efbf4700823)
 
+Here we will give our instance a name, Pick the OS image, and give it a keypair. 
+It is crucial you give your instance a keypair for security reasons. Letting you access your instance securely.
+
+## 
+Once you've clicked on 'create new keypair' you give it a name, choose the pair type and choose the key file format. Once created the key will be downloaded onto your device. Make sure to keep this key secured.
+
+![key pair](https://github.com/user-attachments/assets/5a50047a-b9c3-4454-8402-136e5ed1d7d7)
 
 
 Step 2:
