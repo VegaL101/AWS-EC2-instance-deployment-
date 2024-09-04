@@ -40,6 +40,9 @@ Once you've clicked on 'create new keypair' you give it a name, choose the pair 
 
 ![key pair](https://github.com/user-attachments/assets/5a50047a-b9c3-4454-8402-136e5ed1d7d7)
 
+##
+
+![fill ins for instance](https://github.com/user-attachments/assets/f55d31bd-ad35-4991-86cf-9cf423421f7f)
 
 Step 2:
 Retrieve login attempts on specific dates.
