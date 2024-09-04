@@ -33,9 +33,11 @@ Next we set up the instance.
 ![launch an instance display](https://github.com/user-attachments/assets/7683e5f6-d44c-4b93-848f-6c5ed408ebfd)
 
 
-Here we will give our instance a name, Pick the OS image, and give it a keypair.
+Here we will give our instance a name and choose an OS image for it.
 
 ##
+
+Here give it a key pair, choose the instance type, and configure its network setttings.
 It is crucial you give your instance a keypair for security reasons. Letting you access your instance securely.
 
 ![fill ins for instance](https://github.com/user-attachments/assets/f55d31bd-ad35-4991-86cf-9cf423421f7f)
