@@ -30,10 +30,15 @@ Once at the dashboard you're going to click on the 'launch instance' button that
 
 Next we set up the instance.
 
-![fill ins for instance](https://github.com/user-attachments/assets/d1a61f8d-b257-48c9-8c7a-2efbf4700823)
+![launch an instance display](https://github.com/user-attachments/assets/7683e5f6-d44c-4b93-848f-6c5ed408ebfd)
 
-Here we will give our instance a name, Pick the OS image, and give it a keypair. 
+
+Here we will give our instance a name, Pick the OS image, and give it a keypair.
+
+##
 It is crucial you give your instance a keypair for security reasons. Letting you access your instance securely.
+
+![fill ins for instance](https://github.com/user-attachments/assets/f55d31bd-ad35-4991-86cf-9cf423421f7f)
 
 ## 
 Once you've clicked on 'create new keypair' you give it a name, choose the pair type and choose the key file format. Once created the key will be downloaded onto your device. Make sure to keep this key secured.
@@ -42,7 +47,7 @@ Once you've clicked on 'create new keypair' you give it a name, choose the pair 
 
 ##
 
-![fill ins for instance](https://github.com/user-attachments/assets/f55d31bd-ad35-4991-86cf-9cf423421f7f)
+
 
 Step 2:
 Retrieve login attempts on specific dates.
