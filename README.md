@@ -48,9 +48,28 @@ Once you've clicked on 'create new keypair' you give it a name, choose the pair 
 ![key pair](https://github.com/user-attachments/assets/5a50047a-b9c3-4454-8402-136e5ed1d7d7)
 
 ##
+Next make sure you allow traffic from ssh, https, and http so you can access your instance. After you can configure the storage which i leave as default.
 
+![network settings](https://github.com/user-attachments/assets/038ae014-00cd-4716-9726-e84d5ae9f949)
 
+##
 
+Next, we can launch the instance which might take a while before its up and running. 
+
+![instance launched](https://github.com/user-attachments/assets/cbf99c48-d22b-4876-8b0b-bf65aace6149)
+
+Once its done launching we can go back to our instance from our dashboard and see that its running.
+
+##
+
+Now we will allocate our IP address if we dont do this everytime we reboot our instance our ipv4 address will change which is what i dont want. We wanna go back to our EC2 dashboard and click on Elastic IP addresses and then click on the orange button the top right corner of the screen.<br>
+Leave evrything as the default when Allocating a ip address and hit 'Allocate' on the bottom.
+Now that you've created a new ip address you may select it and click on the actions drop down and click on 'Associate Elastic IP address' and then procceed to choose your instance that you created and click on 'Associate' down below.<br>
+If done correctly your Instance will now be associated your ip elastic ip address. To check this, you can go back to your instance and it should have your public IPv4 address updated.
+
+![allocate ip](https://github.com/user-attachments/assets/f6fa6e77-8411-46a4-9f20-6515dc51891e)
+
+##
 Step 2:
 Retrieve login attempts on specific dates.
 
