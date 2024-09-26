@@ -78,6 +78,7 @@ If done correctly your Instance will now be associated your ip elastic ip addres
 ##
 
 Now for the final part of this step we will be connecting our instance via SSH. For this part i will be using my Ubuntu VM to connect to my instance. If you are using windows you may have to use a SSH client.<br>
+
 Firstly i need to find our PEM file which is our key key we created earlier. To do this go to your command line and type in the 'ls' command to bring up all the directories. After, type in 'cd Downloads' which will take me to the directory where i have my key stored. I then type 'ls' again and any files or directories i have in there will appear. 
 
 ![how to find pem file](https://github.com/user-attachments/assets/378ab2d7-0389-46c3-b667-78015c03032b)
