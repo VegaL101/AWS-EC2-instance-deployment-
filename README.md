@@ -64,14 +64,26 @@ Once its done launching we can go back to our instance from our dashboard and se
 
 Now we will allocate our IP address if we dont do this everytime we reboot our instance our ipv4 address will change which is what i dont want. We wanna go back to our EC2 dashboard and click on Elastic IP addresses and then click on the orange button the top right corner of the screen.<br>
 Leave evrything as the default when Allocating a ip address and hit 'Allocate' on the bottom.
-Now that you've created a new ip address you may select it and click on the actions drop down and click on 'Associate Elastic IP address' and then procceed to choose your instance that you created and click on 'Associate' down below.<br>
-If done correctly your Instance will now be associated your ip elastic ip address. To check this, you can go back to your instance and it should have your public IPv4 address updated.
+
 
 ![allocate ip](https://github.com/user-attachments/assets/f6fa6e77-8411-46a4-9f20-6515dc51891e)
 
 ##
-Step 2:
-Retrieve login attempts on specific dates.
+
+Now that you've created a new ip address you may select it and click on the actions drop down and click on 'Associate Elastic IP address' and then procceed to choose your instance that you created and click on 'Associate' down below.<br>
+If done correctly your Instance will now be associated your ip elastic ip address. To check this, you can go back to your instance and it should have your public IPv4 address updated.
+
+![connect to instance](https://github.com/user-attachments/assets/f2f77d57-4dcf-4bb4-8eb2-05a744419690)
+
+##
+
+Now for the final part of this step we will be connecting our instance via ssh. For this 
+
+
+
+
+ Step 2:
+
 
 A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
 The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
