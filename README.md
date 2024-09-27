@@ -85,6 +85,10 @@ Firstly i need to find our PEM file which is our key key we created earlier. To 
 
 ##
 
+Once we have our key we'll copy and paste it with this command below in order to remotley access our instance. we use: ssh -i "(paste pem file here)" ubuntu@(elastic ip address). if everything is correct it should look similar to the image below. If it fails you may have to change the permissions using the command 'chmod 400'.
+
+![ssh connect image](https://github.com/user-attachments/assets/9ee83275-0ce6-4698-bf80-d778a18231b1)
+
  Step 2:
 
 
