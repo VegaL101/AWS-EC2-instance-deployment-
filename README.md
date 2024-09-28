@@ -85,11 +85,28 @@ Firstly i need to find our PEM file which is our key key we created earlier. To 
 
 ##
 
-Once we have our key we'll copy and paste it with this command below in order to remotley access our instance. we use: ssh -i "(paste pem file here)" ubuntu@(elastic ip address). if everything is correct it should look similar to the image below. If it fails you may have to change the permissions using the command 'chmod 400'.
+Once we have our key we'll copy and paste it with this command below in order to remotley access our instance. we use: ssh -i "(paste pem file here)" ubuntu@(elastic ip address). if everything is correct it should look similar to the image below. 
+
+If it fails you may have to change the permissions using the command 'chmod 400'.
 
 ![ssh connect image](https://github.com/user-attachments/assets/9ee83275-0ce6-4698-bf80-d778a18231b1)
 
  Step 2:
+ Creating our wordpress website
+
+In step two we will install apache web server on our instance. To do this we run the command: sudo apt install apache2 .<br>
+Should look similar to down below. Now on your web browser you can type in your elastic  
+
+![install apache web server on instance](https://github.com/user-attachments/assets/29829e5e-a555-4f37-b57b-449f91b717ed)
+
+##
+
+ Now on your web browser you can type in your elastic ip address and look up your website which should look like below (for now).
+
+ ![lamp-stack-ubuntu-22 04-768x949](https://github.com/user-attachments/assets/8c342f4d-242b-4df4-acde-25f723f996a9)
+
+ 
+![install php runtime (word press is built on php)](https://github.com/user-attachments/assets/c50764b4-6923-4165-a6b7-5bfea2d62816)
 
 
 A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
