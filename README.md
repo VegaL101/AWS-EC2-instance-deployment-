@@ -105,9 +105,24 @@ Should look similar to down below. Now on your web browser you can type in your 
 
  ![lamp-stack-ubuntu-22 04-768x949](https://github.com/user-attachments/assets/8c342f4d-242b-4df4-acde-25f723f996a9)
 
+##
+
+Now after checking that we can go back to our terminal to continue this steo.<br>
+since wordpress is built on PHP we need to install PHP runtime and MYSQL connector for PHP so that they may work together.<br> The command for this is: sudo apt install php libapache2-mod-php php-mysql <br> same as the image below.
  
 ![install php runtime (word press is built on php)](https://github.com/user-attachments/assets/c50764b4-6923-4165-a6b7-5bfea2d62816)
 
+##
+
+Next we install MYSQL sever for our database so we put in the command: sudo apt install mysql-server
+
+![mysqlerver(for database)](https://github.com/user-attachments/assets/b1be628f-d05c-40d6-8698-d330db9acd7d)
+
+##
+
+One quick configuration we have to make on our mysql server is to change our mysql authentication plugin to a native password
+
+![configure mysql server](https://github.com/user-attachments/assets/9e8d7aa4-fc4b-445d-88cc-1c73337c4e03)
 
 A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
 The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
