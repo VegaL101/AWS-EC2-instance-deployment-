@@ -120,10 +120,16 @@ Next we install MYSQL sever for our database so we put in the command: sudo apt 
 
 ##
 
-One quick configuration we have to make on our mysql server is to change our mysql authentication plugin to a native password
+One quick configuration we have to make on our mysql server is to change our mysql authentication plugin to a native password.
+We use the command: sudo mysql -u root<br> this lets us connet to our mysql prompt as a root user 
 
 ![configure mysql server](https://github.com/user-attachments/assets/9e8d7aa4-fc4b-445d-88cc-1c73337c4e03)
 
+##
+
+Now we type in the command: alter user 'ROOT'@LOCALHOST iDENTIFIED WITH my sql_native_password BY '(your password)';
+
+![SQLCREATEPASSWORD](https://github.com/user-attachments/assets/e9a4172a-548d-463e-9415-40f36ceafb48)
 A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
 The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
 
