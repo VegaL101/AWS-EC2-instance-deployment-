@@ -145,7 +145,8 @@ next we need to create a seperate database for your website and we can call it '
 
 ##
 
-Next we give all the privileges in this database to the user we just created. We do this by typing: GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
+Next we give all the privileges in this database to the user we just created. We do this by typing: GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost; <br> After this we should be done with making configurations for mysql server so we wold 'ctrl' and 'd' to exit of the mysql prompt 
+
 
 ![all priviliges of wp to user](https://github.com/user-attachments/assets/9ab53862-fb5f-4b8b-84fc-3159d1a85d9e)
 
