@@ -152,8 +152,10 @@ Next we give all the privileges in this database to the user we just created. We
 
 ##
 
-Whats left is to actually install wordpress. So we'll go to the wordpress website, click on get website amd click on releases on the bottom left, Here we will copy the link of the latest 'tar.gz' file. now we go back to our terminal and input: cd /tmp <br> which will change our directories and now we can type: wget (link of the tar file) <br>
-this should be the <a href=https://wordpress.org/download/releases/>link</a> to the most recent release of wordpress as of the creation of this project. You might have 
+Whats left is to actually install wordpress. So we'll go to the wordpress website and go to their releases linked <a href=https://wordpress.org/download/releases/>Here<a/>,Here we will copy the link of the latest release of the 'tar.gz' file.
+
+now we go back to our terminal and input: cd /tmp <br> which will change our directories and now we can type: wget (link of the tar file) <br>
+this should be the to the most recent release of wordpress as of the creation of this project. You might have 
 
 
 
