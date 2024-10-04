@@ -130,10 +130,30 @@ We use the command: sudo mysql -u root<br> this lets us connet to our mysql prom
 Now we type in the command: alter user 'ROOT'@LOCALHOST iDENTIFIED WITH my sql_native_password BY '(your password)';
 
 ![SQLCREATEPASSWORD](https://github.com/user-attachments/assets/e9a4172a-548d-463e-9415-40f36ceafb48)
-A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
-The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
 
-![sql portfolio 2](https://github.com/VegaL101/computer-updates-lab/assets/166334918/c76ecf2d-ceac-4d44-8bc8-9e81c966b341)
+##
+
+Next to create a new user for my sqlserver other than root and to do this we type in: CREATE USER 'wp_user'@localhost IDENTIFIED BY '(password you created)'
+
+![createmysqluser](https://github.com/user-attachments/assets/6bbe2622-bb2d-4d6a-8e9d-2fa9a3745d5e)
+
+##
+
+next we need to create a seperate database for your website and we can call it 'wp'. I type in: CREATE DATABASE wp;
+
+![seperate db to use w WP](https://github.com/user-attachments/assets/3b60a47d-be8d-4dd4-ac5c-fb74097949ce)
+
+##
+
+Next we give all the privileges in this database to the user we just created. We do this by typing: GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
+
+![all priviliges of wp to user](https://github.com/user-attachments/assets/9ab53862-fb5f-4b8b-84fc-3159d1a85d9e)
+
+##
+
+
+
+
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09. The second condition is login_date = '2022-05-08', which filters for logins on 2022-05-08.
 
