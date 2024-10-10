@@ -163,6 +163,12 @@ should look similar to below.
 
 
 
+![find and unzip tar](https://github.com/user-attachments/assets/f79b3cf7-8990-4077-af98-369261fc4fbf)
+
+
+
+
+
 
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09. The second condition is login_date = '2022-05-08', which filters for logins on 2022-05-08.
