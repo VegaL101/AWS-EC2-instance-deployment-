@@ -155,7 +155,12 @@ Next we give all the privileges in this database to the user we just created. We
 Whats left is to actually install wordpress. So we'll go to the wordpress website and go to their releases linked <a href=https://wordpress.org/download/releases/>Here<a/>,Here we will copy the link of the latest release of the 'tar.gz' file.
 
 now we go back to our terminal and input: cd /tmp <br> which will change our directories and now we can type: wget (link of the tar file) <br>
-this should be the to the most recent release of wordpress as of the creation of this project. You might have 
+should look similar to below.
+
+![wget wordpress](https://github.com/user-attachments/assets/31d05ea2-a5bc-4788-9cb8-ff30d5341960)
+
+##
+
 
 
 
