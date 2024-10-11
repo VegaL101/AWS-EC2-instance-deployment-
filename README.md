@@ -161,11 +161,23 @@ should look similar to below.
 
 ##
 
-
+Now type in 'ls' to find our file and to unzip the file we just input the command: tar -xvf (the file you downloaded) <br>
+After this type in 'ls' again and you should see a new folder called wordpress.
 
 ![find and unzip tar](https://github.com/user-attachments/assets/f79b3cf7-8990-4077-af98-369261fc4fbf)
 
+##
 
+We then need to move this folder into the document root of apache. So we type: sudo mv wordpress/ /var/www/html/ <br>
+which should move it and to verify it did so correctly we type: cd /varwww/html/
+
+![move wordpress to root of apache](https://github.com/user-attachments/assets/ace29919-7d4b-400f-b944-2576b6f5e8d3)
+
+##
+
+We now go back to our website and reload the page and if everything has been done correctly you should be taken to the wordprerss installation screen.
+
+![installation of wordpress](https://github.com/user-attachments/assets/142e30c0-27e6-4bb0-8e6c-955c6337a901)
 
 
 
