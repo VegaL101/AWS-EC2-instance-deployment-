@@ -188,27 +188,40 @@ Here we configure our database information but after clicking 'submit' You will 
 ##
 
 The error will say 'unable to write to wp-config.phpfile.' so we will copy the entire code below, go to our wordpress directory and type in: nano wp-config.php <br>
-we do this to create a new file in our directory and to past all the code we just copied from before into this file. 
+we do this to create a new file in our directory and to past all the code we just copied from before into this file. After doing so the file should look like the image below and if everything looks correct we can now save the file.
 
 ![config file paste](https://github.com/user-attachments/assets/2690ad2b-fcbb-4393-8505-8d8f3aa33352)
 
-The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09. The second condition is login_date = '2022-05-08', which filters for logins on 2022-05-08.
+##
 
+ We come back to our browser and we can continue you to 'run installation'. If what appears next looks like the screenshot below that means our error has been resolved.<br> 
+ Here we fill out our website information i have a simple password as an example for this project but it is important that you employ strong password practices. <br>
+ Once everything is filled we click on 'Install Wordpress' to continue.
 
+![install wordpress(after file config)](https://github.com/user-attachments/assets/eead5197-2e20-4a9c-9327-4112b57ad19c)
 
-Step 3:
-Retrieve login attempts outside of Mexico.
+##
 
-Login attempts outside of Mexico also need to be looked up due to suspicious activity.
+Here we can now click ' login' which will take you to your login admin page.
 
-![sql portfolio 3](https://github.com/VegaL101/computer-updates-lab/assets/166334918/0249c5d3-1ebc-4e9b-86e7-e762e82732a1)
+![wordpressdashboardlogin](https://github.com/user-attachments/assets/8eec39f0-f4d7-48bd-9733-3dd09fbd2466)
 
-FIrst i selected all data from the log_in_attempts table. Then, I used a WHERE  with NOT to retrieve login attempts everywhere but Mexico . I used LIKE with MEX% to find anything that starts with “Mex”  since both MEX and MEXICO can appear on the dataset. 
+##
 
+Next we will leave the login page and go back to wordpress to see our updated website. Everything should be at default until you begin to make changes. 
 
+![default wordpress website(actual site)](https://github.com/user-attachments/assets/bf7ccb9a-5b00-4dff-af59-7d1df3721017)
 
-Step 4:
-Retrieve employees in Marketing.
+##
+
+Now for one of the final parts in this steps is to get rid of wordpress as a subpath on our ip address and instead have our ip address take us directly to our wordpresswebsite website.<br>
+
+We wanna go back to our terminal and type: cd /etc/apache2/sites-available <br> to change our directory and the type: ls<br>
+to find our '000-default.conf' file and open it up with the command: nano-default.conf
+
+![set wordpress as default ip from apache default](https://github.com/user-attachments/assets/13f2bcf7-4ffa-47a4-b1a1-ea93f60c59ec)
+
+##
 
 Certain employees in the marketing department located in the east building need their systems to be updated. To do this I need to create a new query. 
 
