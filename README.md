@@ -221,6 +221,9 @@ to find our '000-default.conf' file and open it up with the command: nano-defaul
 
 ![set wordpress as default ip from apache default](https://github.com/user-attachments/assets/13f2bcf7-4ffa-47a4-b1a1-ea93f60c59ec)
 
+Once inside the file we look for our Documentroot and add '/wordpress' at the end of 'html' the whole thing should be typed out as: /var/www/html/wordpress<br>
+once changed you can save your changes and exit.
+
 ##
 
 Certain employees in the marketing department located in the east building need their systems to be updated. To do this I need to create a new query. 
