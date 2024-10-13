@@ -175,13 +175,22 @@ which should move it and to verify it did so correctly we type: cd /varwww/html/
 
 ##
 
-We now go back to our website and reload the page and if everything has been done correctly you should be taken to the wordprerss installation screen.
+We now go back to our website, type '/wordpress. after your ip address and reload the page and if everything has been done correctly you should be taken to the wordprerss installation screen. We then click on 'Let's go!' to continue.
 
 ![installation of wordpress](https://github.com/user-attachments/assets/142e30c0-27e6-4bb0-8e6c-955c6337a901)
 
+##
 
+Here we configure our database information but after clicking 'submit' You will be met with an error.  
 
+![wp setup config](https://github.com/user-attachments/assets/1e449fa5-9ca9-4c5e-af4a-48e2b5c35d47)
 
+##
+
+The error will say 'unable to write to wp-config.phpfile.' so we will copy the entire code below, go to our wordpress directory and type in: nano wp-config.php <br>
+we do this to create a new file in our directory and to past all the code we just copied from before into this file. 
+
+![config file paste](https://github.com/user-attachments/assets/2690ad2b-fcbb-4393-8505-8d8f3aa33352)
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the log_in_attempts table. Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09. The second condition is login_date = '2022-05-08', which filters for logins on 2022-05-08.
 
