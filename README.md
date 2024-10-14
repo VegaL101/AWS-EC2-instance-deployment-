@@ -208,16 +208,22 @@ Here we can now click ' login' which will take you to your login admin page.
 
 ##
 
-Next we will leave the login page and go back to wordpress to see our updated website. Everything should be at default until you begin to make changes. 
+Next, we login which will take us to our wordpress dashboard. and go back to wordpress to see our updated website. Everything should be at default until you begin to make changes. 
 
 ![default wordpress website(actual site)](https://github.com/user-attachments/assets/bf7ccb9a-5b00-4dff-af59-7d1df3721017)
 
 ##
 
+Once at the dashboard. We wanna go to settings on the bottom left and click on 'General'.
+
+![general settings  domain changes](https://github.com/user-attachments/assets/681b99d6-c162-4778-80e5-ebd79bc12e91)
+
+
+##
 Now for one of the final parts in this steps is to get rid of wordpress as a subpath on our ip address and instead have our ip address take us directly to our wordpresswebsite website.<br>
 
 We wanna go back to our terminal and type: cd /etc/apache2/sites-available <br> to change our directory and the type: ls<br>
-to find our '000-default.conf' file and open it up with the command: nano-default.conf
+to find our '000-default.conf' file and open it up with the command: sudo nano-default.conf
 
 ![set wordpress as default ip from apache default](https://github.com/user-attachments/assets/13f2bcf7-4ffa-47a4-b1a1-ea93f60c59ec)
 
@@ -225,6 +231,15 @@ Once inside the file we look for our Documentroot and add '/wordpress' at the en
 once changed you can save your changes and exit.
 
 ##
+
+After these changes we can restart apache2 to update it. We type: sudo systemctl restart apache2
+
+![restart apache after default change](https://github.com/user-attachments/assets/b1c13000-58ff-4a53-aaf4-7cd9bcf8e48b)
+
+Once we have done that we can come back and refresh our page 
+##
+
+
 
 Certain employees in the marketing department located in the east building need their systems to be updated. To do this I need to create a new query. 
 
