@@ -218,9 +218,20 @@ Once at the dashboard. We wanna go to settings on the bottom left and click on '
 
 ![general settings  domain changes](https://github.com/user-attachments/assets/681b99d6-c162-4778-80e5-ebd79bc12e91)
 
+##
+
+Now, on 'WordPress Address' and 'Site Address' is where we will add our website address. So now is the time to create a domain. There are many domain name services some are free but i would reccommend a paid one. Once we we have our domain We wanna make sure to create a 'A' type record that points to our IP address and has a 'TTL' of 60.
+
+In my example i have created my domain using Hostinger. As you can see below my websites name is<br>
+http://www.mywpsample.tech 
+
+![general settings  domain changes](https://github.com/user-attachments/assets/f8f02bea-21dd-468a-99a6-83b59f2754b8)
+
+Once you have your domain, make sure to add it just as i did in my example and to save your changes at the bottom.
 
 ##
-Now for one of the final parts in this steps is to get rid of wordpress as a subpath on our ip address and instead have our ip address take us directly to our wordpresswebsite website.<br>
+
+Now for one of the final parts in this steps is to get rid of wordpress as a subpath on our website and instead have our ip website address take us directly to our wordpress website.<br>
 
 We wanna go back to our terminal and type: cd /etc/apache2/sites-available <br> to change our directory and the type: ls<br>
 to find our '000-default.conf' file and open it up with the command: sudo nano-default.conf
@@ -236,8 +247,12 @@ After these changes we can restart apache2 to update it. We type: sudo systemctl
 
 ![restart apache after default change](https://github.com/user-attachments/assets/b1c13000-58ff-4a53-aaf4-7cd9bcf8e48b)
 
-Once we have done that we can come back and refresh our page 
 ##
+
+Once we have done that we can come back and refresh our page if done correctly our wordpress website will appear by default. 
+
+![default wordpress website(actual site)](https://github.com/user-attachments/assets/a74bc03d-574c-4de0-98cb-0f82594289ef)
+
 
 
 
