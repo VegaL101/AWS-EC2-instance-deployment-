@@ -229,12 +229,21 @@ Although in my example i have created my domain using Hostinger.
 
 Now that you have your domain name and have added a 'A' type record we'll go back to our terminal and and type: cd /etc/apache2/sites-available <br> to change our directory and the type: ls<br>
 to find our '000-default.conf' file<br>
-Here we can modify our file so we can add two new fields. One will be 'ServerName (your website)' and the other 'ServerAlias www.(your website)' if done correctly it will look like image below 
+Here we can modify our file so we can add two new fields. One will be 'ServerName (your website)' and the other 'ServerAlias www.(your website)'. We then save and exit the file and if done correctly it will look like image below. In this project my websited is 'www.mywpsample.tech'.
+
+![servernameserveralias](https://github.com/user-attachments/assets/5579620e-5e4b-41bd-9893-c191b8cb7350)
 
 ##
 
-Now, on 'WordPress Address' and 'Site Address' is where we will add our website address.  . As you can see below my websites name is<br>
-http://www.mywpsample.tech 
+Next, you wanna restart apache so our chnages take in effect. We do this by typing the command: sudo systemctl restart apache2 <br>
+as shown below:
+
+![restart apache after default change](https://github.com/user-attachments/assets/2d4e734f-ff6e-45a0-b329-cdace4a04146)
+
+##
+
+Now, back onto our wordpress settings we fill out 'WordPress Address' and 'Site Address' with our website address. Make sure to leave in the 'http://' before your address.<br>
+you can see my websites address down below as an example.
 
 ![general settings  domain changes](https://github.com/user-attachments/assets/f8f02bea-21dd-468a-99a6-83b59f2754b8)
 
