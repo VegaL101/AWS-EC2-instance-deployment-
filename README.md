@@ -214,24 +214,35 @@ Next, we login which will take us to our wordpress dashboard. and go back to wor
 
 ##
 
-Once at the dashboard. We wanna go to settings on the bottom left and click on 'General'.
+Once at the dashboard. We wanna go to settings on the bottom left and click on 'General'. Which will show the screen below 
 
 ![general settings  domain changes](https://github.com/user-attachments/assets/681b99d6-c162-4778-80e5-ebd79bc12e91)
 
 ##
 
-Now, on 'WordPress Address' and 'Site Address' is where we will add our website address. So now is the time to create a domain. There are many domain name services some are free but i would reccommend a paid one. Once we we have our domain We wanna make sure to create a 'A' type record that points to our IP address and has a 'TTL' of 60.
+Before we proceed on wordpress, Now is the time to create a domain. There are many domain name services some are free but i would reccommend a paid one. Once we we have our domain We wanna make sure to create a 'A' type record that points to our IP address and has a 'TTL' of 60.
+<br>
+i have no specific screenshots to share as this part entirely depends on the service you use.
+Although in my example i have created my domain using Hostinger.
 
-In my example i have created my domain using Hostinger. As you can see below my websites name is<br>
+##
+
+Now that you have your domain name and have added a 'A' type record we'll go back to our terminal and and type: cd /etc/apache2/sites-available <br> to change our directory and the type: ls<br>
+to find our '000-default.conf' file<br>
+Here we can modify our file so we can add two new fields. One will be 'ServerName (your website)' and the other 'ServerAlias www.(your website)' if done correctly it will look like image below 
+
+##
+
+Now, on 'WordPress Address' and 'Site Address' is where we will add our website address.  . As you can see below my websites name is<br>
 http://www.mywpsample.tech 
 
 ![general settings  domain changes](https://github.com/user-attachments/assets/f8f02bea-21dd-468a-99a6-83b59f2754b8)
 
-Once you have your domain, make sure to add it just as i did in my example and to save your changes at the bottom.
+Once you have your domain, make sure to add it just as i did in my example and to save your changes at the bottom. When you click save your website will temporarily be broken but we will be applying the fix for this in the next part of the step
 
 ##
 
-Now for one of the final parts in this steps is to get rid of wordpress as a subpath on our website and instead have our ip website address take us directly to our wordpress website.<br>
+Now in this part of the step we fix our website and get rid of wordpress as a subpath on our website and instead have our website address take us directly to our wordpress website.<br>
 
 We wanna go back to our terminal and type: cd /etc/apache2/sites-available <br> to change our directory and the type: ls<br>
 to find our '000-default.conf' file and open it up with the command: sudo nano-default.conf
@@ -253,8 +264,7 @@ Once we have done that we can come back and refresh our page if done correctly o
 
 ![default wordpress website(actual site)](https://github.com/user-attachments/assets/a74bc03d-574c-4de0-98cb-0f82594289ef)
 
-
-
+##
 
 Certain employees in the marketing department located in the east building need their systems to be updated. To do this I need to create a new query. 
 
