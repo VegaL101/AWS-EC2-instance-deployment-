@@ -283,7 +283,7 @@ On this final step we'll be wrapping up this project. Now that we have finally c
 
 with only http we are left unsecured and users become vulnerable to several types of attacks such as: <br>
 
-- Man-In-The-Middle (MITM) attacks: Where communication between the user and the website can be intercepted by an attacker, allowing them to modify or steal information <br>>
+- Man-In-The-Middle (MITM) attacks: Where communication between the user and the website can be intercepted by an attacker, allowing them to modify or steal information <br>
 - Eavesdropping: Since data is transmitted in plain text, attackers can intercept and read the data being exchanged between the client and server.<br>
 - Phishing Attacks: HTTP sites lack authentication mechanisms, making it easier for attackers to create spoofed sites that appear legitimate, tricking users into providing sensitive information.<br>
 
