@@ -2,7 +2,7 @@
 
 ## Objective
 
-The purpose of this project is to create, configure, and launched a AWS EC2 instance to deploy a wordpress website through it. The goal of this project is to guide you through the process of creating, configuring, and launching an AWS EC2 instance for deploying a WordPress website. This guide will cover every step in detail, ensuring a proper and complete setup.
+The purpose of this project is to create, configure, and launched a AWS EC2 instance to deploy a wordpress website through it. The goal of this project is to guide you through the process of creating, configuring, and launching an AWS EC2 instance for deploying a WordPress website. This guide will cover every step in detail, ensuring a proper and complete setup. In this project we will be using SSH on Ubuntu to connect to our instance. If you are on windows make sure to have a SSH client for this project.
 
 ### Skills Learned
 
@@ -10,7 +10,7 @@ The purpose of this project is to create, configure, and launched a AWS EC2 inst
 - Connect to the instance remotely.
 - Deploy a wordpress website.
 - create a MYSQL database for your website.
-- give the website a domain and secure it.
+- Use certbot to activate HTTPS securing and protecting our website .
   
 
 
@@ -90,6 +90,8 @@ Once we have our key we'll copy and paste it with this command below in order to
 If it fails you may have to change the permissions using the command 'chmod 400'.
 
 ![ssh connect image](https://github.com/user-attachments/assets/9ee83275-0ce6-4698-bf80-d778a18231b1)
+
+##
 
  Step 2:
  Creating our wordpress website
@@ -275,44 +277,40 @@ Once we have done that we can come back and refresh our page if done correctly o
 
 ##
 
-Certain employees in the marketing department located in the east building need their systems to be updated. To do this I need to create a new query. 
+Step 3:
 
-![sql portfolio4](https://github.com/VegaL101/computer-updates-lab/assets/166334918/980714e7-7e94-4ac1-b61a-d12cca4a71bb)
+On this final step we'll be wrapping up this project. Now that we have finally created our website, we now must make sure our website is secured. You might have seen that our website so far is using 'http' and not 'https' which is what we really want. <br> The difference is https typically uses port 443 which encrypts data using SSL/TLS, providing a secure and safe channel for communication. Also, https Utilizes digital certificates to authenticate the server, helping ensure that users are communicating with the intended website.
 
-This query returns all employees in the Marketing department in the East building. I select all data from the employees table. Then, I used a WHERE with AND to filter for employees who work in the Marketing department and in the East building. I used LIKE with East% since there is more than one office in the east building. I then received the data needed to find out who has yet to update their systems.
+with only http we are left unsecured and users become vulnerable to several types of attacks such as: <br>
 
+- Man-In-The-Middle (MITM) attacks: Where communication between the user and the website can be intercepted by an attacker, allowing them to modify or steal information <br>>
+- Eavesdropping: Since data is transmitted in plain text, attackers can intercept and read the data being exchanged between the client and server.<br>
+- Phishing Attacks: HTTP sites lack authentication mechanisms, making it easier for attackers to create spoofed sites that appear legitimate, tricking users into providing sensitive information.<br>
 
+And several more attacks and security issues.
 
-Step 5:
-Retrieve employees in Finance or Sales.
+##
 
-systems in the Finance and Sales departments also need to be updated. The query returns employees in the Finance and Sales departments.
+To make our website secured, we will be using a tool called certbot. Certbot is a free, open-source tool that helps you easily get and renew SSL/TLS certificates from Let's Encrypt. It makes it simple to enable HTTPS on websites.<br>
+To install certbot we go to our terminal and type in the command: sudo apt install certbot python3-certbot-apache<br>
+Example below.
 
-![portfolio5](https://github.com/VegaL101/computer-updates-lab/assets/166334918/03c97169-b1ee-4339-8444-faa31d408c97)
+![certbotinstall](https://github.com/user-attachments/assets/d39230fd-f602-4d1d-9255-a3e1e7f30e03)
 
-Again I start by selecting all data from the employees table. Then, I used a WHERE  with OR to filter for employees who are in sales and finance. With this query I can find employees in either department.
-Retrieve all employees not in IT
-A security update needs to be done on all employees except those in the IT department.
+##
 
+Now to run certbot we type the command: sudo certbot --apache <br> 
+It will probably ask you to enter your email address and to aggree to the terms of service. After doing so we are presented with our websites we've created and we are asked 'Which names would you like to activate HTTPS for?'. We leave the option as blank and hit enter to start the process. <br>
+Make sure everything looks similar to the image below.In my example above i only activated  HTTPS on one of my domains but make sure you do both options when doing so.
 
+![certbot success](https://github.com/user-attachments/assets/171006eb-601b-4900-9d18-27889e221477)
 
-Step 6:
-Retrieve all employees not in IT
+If the certificates have been deployed successfully you should get a message saying saying 'successfully received certificate' or along those lines. After this we can go back to our website and check our site. You can confirm that your website is secure if you see "HTTPS" in the address bar or a padlock icon on the left side of the URL. This shows that your site is now protected and secure.
+##
 
-A security update needs to be done on all employees except those in the IT department.
+Summary: 
 
-![sql 6](https://github.com/VegaL101/computer-updates-lab/assets/166334918/512b9716-6f59-431f-b031-8179db973824)
-
-
-Similar to the query from earlier i return all employees not in the Information Technology department. First, I started by selecting all data from the employees table. Then, I used a WHERE  with NOT to filter for employees not in this department.
-
-
-Summary:
-
-I created multiple queries to help find information regarding login attempts and employee systemsI. Any data related to login attempts was to investigate suspicious activity and any data involving employee machines was to update any systems that can prove a security risk.
-
-
-
+In this project, we explored the fundamentals of creating and configuring an AWS EC2 instance for hosting a WordPress website. We learned how to install essential components for our website and how to set up and run WordPress effectively. Finally, we implemented Certbot to establish a secure channel for communication, ensuring our website is safe and reliable.
 
 
 
