@@ -2,7 +2,7 @@
 
 ## Objective
 
-The purpose of this project is to create, configure, and launched a AWS EC2 instance to deploy a wordpress website through it. The goal of this project is to guide you through the process of creating, configuring, and launching an AWS EC2 instance for deploying a WordPress website. This guide will cover every step in detail, ensuring a proper and complete setup. In this project we will be using SSH on Ubuntu to connect to our instance. If you are on windows make sure to have a SSH client for this project.
+The purpose of this project is to create, configure, and launch a AWS EC2 instance to deploy a wordpress website through it. The goal of this project is to guide you through the process of creating, configuring, and launching an AWS EC2 instance for deploying a WordPress website. This guide will cover every step in detail, ensuring a proper and complete setup. In this project we will be using SSH on Ubuntu to connect to our instance. If you are on windows make sure to have a SSH client for this project.
 
 ### Skills Learned
 
