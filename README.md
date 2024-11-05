@@ -2,7 +2,7 @@
 
 ## Objective
 
-The purpose of this project is to create, configure, and launch a AWS EC2 instance to deploy a wordpress website through it. The goal of this project is to guide you through the process of creating, configuring, and launching an AWS EC2 instance for deploying a WordPress website. This guide will cover every step in detail, ensuring a proper and complete setup. In this project we will be using SSH on Ubuntu to connect to our instance. If you are on windows make sure to have a SSH client for this project.
+The purpose of this project is to create, configure, and launch a AWS EC2 instance to deploy a wordpress website through it. This guide will cover every step in detail, ensuring a proper and complete setup. In this project we will be using SSH on a Ubuntu VM to connect to our instance. If you are on windows make sure to have a SSH client for this project.
 
 ### Skills Learned
 
@@ -20,7 +20,7 @@ The purpose of this project is to create, configure, and launch a AWS EC2 instan
 Step 1:
 Creating and launching the EC2 instance.
 
-First, on the top left in the searchbar type 'EC2' and make sure to click it. You should then be brought to the ec2 dashboard
+First after Creating an AWS account and logging in, you should be at the main console menu. On the top left in the searchbar type 'EC2' and make sure to click it once you've found it in the search bar. You should then be brought to the ec2 dashboard
 
 ![ec2 dahsboard](https://github.com/user-attachments/assets/6a5285f9-6494-4b57-8aa8-68e3ce62862a)
 
@@ -28,16 +28,16 @@ Once at the dashboard you're going to click on the 'launch instance' button that
 
 ##
 
-Next we set up the instance.
+Next, we set up our instance.
 
 ![launch an instance display](https://github.com/user-attachments/assets/7683e5f6-d44c-4b93-848f-6c5ed408ebfd)
 
 
-Here we will give our instance a name and choose an OS image for it.
+Here we will give our instance a name and choose an OS image for it. For this project we will be using the UBuntu OS image.
 
 ##
 
-Here give it a key pair, choose the instance type, and configure its network setttings.
+We then give it a key pair, choose the instance type, and configure its network setttings to the same as below.
 It is crucial you give your instance a keypair for security reasons. Letting you access your instance securely.
 
 ![fill ins for instance](https://github.com/user-attachments/assets/f55d31bd-ad35-4991-86cf-9cf423421f7f)
@@ -48,7 +48,7 @@ Once you've clicked on 'create new keypair' you give it a name, choose the pair 
 ![key pair](https://github.com/user-attachments/assets/5a50047a-b9c3-4454-8402-136e5ed1d7d7)
 
 ##
-Next make sure you allow traffic from ssh, https, and http so you can access your instance. After you can configure the storage which i leave as default.
+Next, make sure you allow traffic from ssh, https, and http so you can access your instance. After, you can configure the storage which i leave as default.
 
 ![network settings](https://github.com/user-attachments/assets/038ae014-00cd-4716-9726-e84d5ae9f949)
 
@@ -58,11 +58,11 @@ Next, we can launch the instance which might take a while before its up and runn
 
 ![instance launched](https://github.com/user-attachments/assets/cbf99c48-d22b-4876-8b0b-bf65aace6149)
 
-Once its done launching we can go back to our instance from our dashboard and see that its running.
+Once its done launching we can go back to our instance from our dashboard and see that it is running.
 
 ##
 
-Now we will allocate our IP address if we dont do this everytime we reboot our instance our ipv4 address will change which is what i dont want. We wanna go back to our EC2 dashboard and click on Elastic IP addresses and then click on the orange button the top right corner of the screen.<br>
+Now we will allocate our IP address if we dont do this everytime we reboot our instance our ipv4 address will change. We want our ip address to be static. So we go back to our EC2 dashboard and click on Elastic IP addresses and then click on the orange button the top right corner of the screen.<br>
 Leave evrything as the default when Allocating a ip address and hit 'Allocate' on the bottom.
 
 
@@ -70,16 +70,16 @@ Leave evrything as the default when Allocating a ip address and hit 'Allocate' o
 
 ##
 
-Now that you've created a new ip address you may select it and click on the actions drop down and click on 'Associate Elastic IP address' and then procceed to choose your instance that you created and click on 'Associate' down below.<br>
-If done correctly your Instance will now be associated your ip elastic ip address. To check this, you can go back to your instance and it should have your public IPv4 address updated.
+Now that you've created a new ip address. You may select it, click on the actions drop down, and click on 'Associate Elastic IP address' and then procceed to choose your instance that we created earlier and click on 'Associate'.<br>
+If done correctly your Instance will now be associated with your elastic ip address. To check this, you can go back to your instance and it should have your public IPv4 address updated.
 
 ![connect to instance](https://github.com/user-attachments/assets/f2f77d57-4dcf-4bb4-8eb2-05a744419690)
 
 ##
 
-Now for the final part of this step we will be connecting our instance via SSH. For this part i will be using my Ubuntu VM to connect to my instance. If you are using windows you may have to use a SSH client.<br>
+Now for the final part of this step we will be connecting to our instance via SSH. For this  i will be using my Ubuntu VM. If you are using windows you may have to use a SSH client.<br>
 
-Firstly i need to find our PEM file which is our key key we created earlier. To do this go to your command line and type in the 'ls' command to bring up all the directories. After, type in 'cd Downloads' which will take me to the directory where i have my key stored. I then type 'ls' again and any files or directories i have in there will appear. 
+Firstly, we need to find our PEM file which is our key we created earlier. To do this go to our terminal and type in the 'ls' command to bring up all the directories. After, type in 'cd Downloads' which will take me to that directory where i have my key stored. I then type 'ls' again and any files or directories i have in there will appear. 
 
 ![how to find pem file](https://github.com/user-attachments/assets/378ab2d7-0389-46c3-b667-78015c03032b)
 
@@ -109,7 +109,8 @@ Should look similar to down below. Now on your web browser you can type in your 
 
 ##
 
-Now after checking that we can go back to our terminal to continue this steo.<br>
+Now after checking that we can go back to our terminal to continue this step.<br>
+
 since wordpress is built on PHP we need to install PHP runtime and MYSQL connector for PHP so that they may work together.<br> The command for this is: sudo apt install php libapache2-mod-php php-mysql <br> same as the image below.
  
 ![install php runtime (word press is built on php)](https://github.com/user-attachments/assets/c50764b4-6923-4165-a6b7-5bfea2d62816)
@@ -129,32 +130,34 @@ We use the command: sudo mysql -u root<br> this lets us connet to our mysql prom
 
 ##
 
-Now we type in the command: alter user 'ROOT'@LOCALHOST iDENTIFIED WITH my sql_native_password BY '(your password)';
+Now we type in the command: alter user 'ROOT'@LOCALHOST iDENTIFIED WITH my sql_native_password BY '(your password)'; <br>
+
+Make sure to creare a strong password as i use a very simple and easy to guess password for the sake of this project.
 
 ![SQLCREATEPASSWORD](https://github.com/user-attachments/assets/e9a4172a-548d-463e-9415-40f36ceafb48)
 
 ##
 
-Next to create a new user for my sqlserver other than root and to do this we type in: CREATE USER 'wp_user'@localhost IDENTIFIED BY '(password you created)'
+Next to create a new user for my sqlserver other than the root user and to do this we type in: CREATE USER 'wp_user'@localhost IDENTIFIED BY '(password you created)'
 
 ![createmysqluser](https://github.com/user-attachments/assets/6bbe2622-bb2d-4d6a-8e9d-2fa9a3745d5e)
 
 ##
 
-next we need to create a seperate database for your website and we can call it 'wp'. I type in: CREATE DATABASE wp;
+next we need to create a seperate database for our website and we call it 'wp'. I type in: CREATE DATABASE wp;
 
 ![seperate db to use w WP](https://github.com/user-attachments/assets/3b60a47d-be8d-4dd4-ac5c-fb74097949ce)
 
 ##
 
-Next we give all the privileges in this database to the user we just created. We do this by typing: GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost; <br> After this we should be done with making configurations for mysql server so we wold 'ctrl' and 'd' to exit of the mysql prompt 
+Next we give all the privileges in this database to the user we just created. We do this by typing: GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost; <br> After this we should be done with making configurations for mysql server so we hold 'ctrl' and 'd' to exit of the mysql prompt.
 
 
 ![all priviliges of wp to user](https://github.com/user-attachments/assets/9ab53862-fb5f-4b8b-84fc-3159d1a85d9e)
 
 ##
 
-Whats left is to actually install wordpress. So we'll go to the wordpress website and go to their releases linked <a href=https://wordpress.org/download/releases/>Here<a/>,Here we will copy the link of the latest release of the 'tar.gz' file.
+Now whats left is to actually install wordpress. So we'll go to the wordpress website and go to their releases linked <a href=https://wordpress.org/download/releases/>Here<a/>, Here we will copy the link of the latest released 'tar.gz' file.
 
 now we go back to our terminal and input: cd /tmp <br> which will change our directories and now we can type: wget (link of the tar file) <br>
 should look similar to below.
@@ -171,7 +174,7 @@ After this type in 'ls' again and you should see a new folder called wordpress.
 ##
 
 We then need to move this folder into the document root of apache. So we type: sudo mv wordpress/ /var/www/html/ <br>
-which should move it and to verify it did so correctly we type: cd /varwww/html/
+which should move it. To verify it did so correctly we type: cd /varwww/html/
 
 ![move wordpress to root of apache](https://github.com/user-attachments/assets/ace29919-7d4b-400f-b944-2576b6f5e8d3)
 
